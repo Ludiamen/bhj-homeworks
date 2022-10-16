@@ -5,7 +5,7 @@
         const menu = document.body.querySelectorAll(".slider__item");
         if (currentSlide == 0) {
             menu[currentSlide].classList.remove('slider__item_active')
-            currentSlide = 4;
+            currentSlide = menu.length-1;
             menu[currentSlide].classList.add('slider__item_active')
         } else {
             currentSlide -= 1;
