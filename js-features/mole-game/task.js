@@ -6,6 +6,13 @@
     function myFunction() {
         const dead = document.getElementById("dead");
         const lost = document.getElementById("lost");
+
+        function resetScore (state) {
+            alert(state);
+            dead.textContent = 0;
+            lost.textContent = 0;
+        }
+
         if (dead.textContent <= 8 & lost.textContent <= 3) {
             if (this.className == "hole hole_has-mole") {
                 dead.textContent++ + 1;
@@ -15,15 +22,10 @@
         } 
 
         if (dead.textContent >= 8) {
-            alert('Вы выиграли!');
-            dead.textContent = 0;
-            lost.textContent = 0;
+            resetScore('Вы выиграли!');
         } 
          
         if (lost.textContent >= 3){
-            alert('Вы проиграли.');
-            dead.textContent = 0;
-            lost.textContent = 0;
+            resetScore('Вы проиграли.');
         }
-    }
     })();

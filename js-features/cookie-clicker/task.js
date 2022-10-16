@@ -3,12 +3,6 @@ const clickerCounter = document.getElementById("clicker__counter");
 
 
 cookie.onclick = function() {
-    let clicks = clickerCounter.textContent++;
-    if (clicks % 2 == 0) {
-        cookie.width = 150;
-        cookie.height = 150;
-    } else {
-        cookie.width = 200;
-        cookie.height = 200;
-    }
+    cookie.width = ++clickerCounter.textContent % 2 ? 150 : 200;
+    cookie.height = cookie.width
 }
